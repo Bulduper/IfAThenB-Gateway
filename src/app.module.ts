@@ -22,7 +22,7 @@ import { ConfigModule } from '@nestjs/config';
         name: 'LISTENER_SERVICE',
         transport: Transport.TCP,
         options: {
-          port: 3001,
+          port: +process.env.LISTENER_TCP_PORT,
           host: process.env.LISTENER_HOST,
         },
       },
